@@ -1,0 +1,11 @@
+---
+ - name: "在ubuntu上安装nginx"
+   apt: name=nginx state=present
+ - name: "修改服务器上nginx的配置文件nginx.conf"
+   template: src="templates/nginx.conf.j2" dest="/etc/nginx/nginx.conf"
+   notify:
+     - restart nginx
+ - name: "配置host为cakechina.org的nginx文件"
+   template: src="/etc/ansible/roles/nginx/templates/nginx_vhost.j2" dest="/etc/nginx/conf.d/www.cakechina.org.conf"
+   notify:
+     - restart nginx

@@ -1,0 +1,5 @@
+---
+ - include_tasks: nginx_for_centos.yml
+   when: ansible_distribution == "RedHat"
+ - include_tasks: nginx_for_ubuntu.yml
+   when: ansible_distribution == "Ubuntu"

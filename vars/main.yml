@@ -1,0 +1,8 @@
+---
+#variable
+  nginx_host: cakechina.org
+  nginx_web_site: "/var/www/html"
+  nginx_port: 80
+  nginx_user: www-data
+  nginx_pid: "/run/nginx.pid"
+  nginx_worker_connections: 768
