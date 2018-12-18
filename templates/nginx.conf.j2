@@ -1,4 +1,8 @@
-user {{ nginx_user }};
+{%if ansible_distribution == 'CentOS' %}
+user {{ centos_nginx_user }};
+{% else %}
+user {{ ubuntu_nginx_user }};
+{% endif %}
 worker_processes auto;
 pid {{ nginx_pid }};
 
@@ -67,9 +71,12 @@ http {
 	##
 	# Virtual Host Configs
 	##
-
+    {%if ansible_distribution == 'CentOS' %}
+    include /etc/nginx/default.d/*.conf;
+    {% else %}
 	include /etc/nginx/conf.d/*.conf;
 	include /etc/nginx/sites-enabled/*;
+	{% endif %}
 }
 
 

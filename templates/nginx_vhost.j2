@@ -2,15 +2,14 @@ server{
     listen      {{ nginx_port }};
     server_name {{ nginx_host }};
     index index.php index.html index.htm;
-    root  {{ nginx_web_site }};
+    {% if ansible_distribution=='CentOS' %}
+    root  {{ centos_nginx_web_site }};
+    {% else %}
+    root  {{ ubuntu_nginx_web_site }};
+    {% endif %}
 
      location / {
        try_files $uri $uri/ /index.php?$query_string;
-   }
-
-   location ~ \.php$ {
-       include snippets/fastcgi-php.conf;
-       fastcgi_pass unix:/run/php/php7.0-fpm.sock;
    }
 
      error_log /var/log/error_{{ nginx_host }}.log error;

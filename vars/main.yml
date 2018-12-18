@@ -1,8 +1,10 @@
 ---
 #variable
-  nginx_host: xxx.xxx
-  nginx_web_site: "/var/www/html"
+  nginx_host: cakechina.org
+  ubuntu_nginx_web_site: "/var/www/html"
+  centos_nginx_web_site: "/usr/share/nginx/html"
   nginx_port: 80
-  nginx_user: www-data
+  ubuntu_nginx_user: www-data
+  centos_nginx_user: nginx
   nginx_pid: "/run/nginx.pid"
   nginx_worker_connections: 768

@@ -45,6 +45,3 @@ Author Information
 ------------------
  
  Help me do it better,thank u guys.
-
-                                                    
-                                                     Leslie
