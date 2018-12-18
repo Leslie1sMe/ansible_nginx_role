@@ -1,31 +1,40 @@
 Nginx
 =========
 
-A brief description of the role goes here.
+Making the installation of nginx  easily.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+well, you should use ansible version >=2.4
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+the variables i wrote in the vars/main.yml as below:
 
-Dependencies
-------------
+    
+     nginx_host: xxxx.xxx   
+     nginx_web_site: "/var/www/html"  
+     nginx_port: 80   
+     nginx_user: www-data  
+     nginx_pid: "/run/nginx.pid"  
+     nginx_worker_connections: 768
+    
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
-
-Example Playbook
+Example
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+You can use the role easily by using a brief playbook.yml for example:
 
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+         - { role: leslie1sme.ansible_nginx_role}
+         
+         
+        
+  and just run in the command: ansible-playbook playbook.yml,Do not forget to change the value of the variables,enjoy it :)
+
 
 License
 -------
@@ -35,4 +44,4 @@ BSD
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+github: https://github.com/Leslie1sMe, help me do the things better,thank u guys.

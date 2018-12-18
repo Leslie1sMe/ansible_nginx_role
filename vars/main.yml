@@ -1,6 +1,6 @@
 ---
 #variable
-  nginx_host: cakechina.org
+  nginx_host: xxx.xxx
   nginx_web_site: "/var/www/html"
   nginx_port: 80
   nginx_user: www-data
