@@ -1,8 +1,16 @@
 galaxy_info:
   author: Leslie
   description: install nginx for ur application environment
-  company: your company (optional)
-  license: license (GPLv2, CC-BY, etc)
+  license: "license (BSD, MIT)"
   min_ansible_version: 2.4
   galaxy_tags: [nginx]
-dependencies: []
+  platforms:
+    - name: Ubuntu
+      versions:
+        - all
+    - name: CentOS
+      versions:
+        - all
+  galaxy_tags:
+      - web
+      - nginx
