@@ -1,6 +1,6 @@
 ---
  - name: "在centos上安装nginx"
-   yum: name=nginx  state=latest
+   yum: name=nginx  state=present
    tags: nginx
  - name: "修改服务器上nginx的配置文件nginx.conf"
    template: src="templates/nginx.conf.j2" dest="/etc/nginx/nginx.conf"

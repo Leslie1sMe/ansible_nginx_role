@@ -1,16 +1,16 @@
 ---
+dependencies: []
+
 galaxy_info:
   author: Leslie
-  description: Nginx installation for Linux.
+  description: Nginx installation for Linux(CentOS,Ubuntu).
   license: "license (BSD, MIT)"
   min_ansible_version: 2.4
   platforms:
     - name: Ubuntu
       versions:
-        - all
-    - name: RedHat
-      versions:
-        - all
+        - trusty
+        - xenial
   galaxy_tags:
     - development
     - web
