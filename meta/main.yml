@@ -1,16 +1,17 @@
+---
 galaxy_info:
   author: Leslie
-  description: install nginx for ur application environment
+  description: Nginx installation for Linux.
   license: "license (BSD, MIT)"
   min_ansible_version: 2.4
-  galaxy_tags: [nginx]
   platforms:
     - name: Ubuntu
       versions:
         - all
-    - name: CentOS
+    - name: RedHat
       versions:
         - all
   galaxy_tags:
-      - web
-      - nginx
+    - development
+    - web
+    - nginx
